@@ -141,10 +141,13 @@ export default function Home() {
     formData.append("targetFormat", targetFormat);
 
     try {
-      const response = await fetch("http://localhost:4444/api/upload", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/upload`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
