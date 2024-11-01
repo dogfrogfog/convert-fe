@@ -1,5 +1,5 @@
 {
-  "name": "converter",
+  "name": "convert-fe",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
